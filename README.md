@@ -4,8 +4,8 @@ This is a solution to the [3-column preview card component challenge on Frontend
 
 ### Screenshot
 
-![](./mobile.jpg)
-![](./desktop.jpg)
+![](mobile.png)
+![](desktop.png)
 
 ### Links
 
