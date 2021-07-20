@@ -35,8 +35,8 @@ main {
 
 .card:nth-of-type(1) {
   background-color: var(--brightOrange);
-  border-top-left-radius: 5%;
-  border-top-right-radius: 5%;
+  border-top-left-radius: 2.5%;
+  border-top-right-radius: 2.5%;
 }
 
 .card:nth-of-type(2) {
@@ -45,8 +45,8 @@ main {
 
 .card:nth-of-type(3) {
   background-color: var(--veryDarkCyan);
-  border-bottom-left-radius: 5%;
-  border-bottom-right-radius: 5%;
+  border-bottom-left-radius: 2.5%;
+  border-bottom-right-radius: 2.5%;
 }
 
 .card__title {
@@ -58,9 +58,10 @@ main {
 
 .card__text {
   font-family: "Lexand Deca", sans-serif;
-  font-size: 15px;
+  font-size: 1rem;
   color: var(--transparentWhite);
-  line-height: 1.75em;
+  line-height: 2em;
+  letter-spacing: 0.5px;
 }
 
 .card__button {
@@ -70,6 +71,7 @@ main {
   margin-top: 2em;
   background: var(--veryLightGray);
   padding: 1em 2em;
+  border: solid 3px transparent;
   border-radius: 10em;
   text-decoration: none;
   font-family: "Lexand Deca", sans-serif;
@@ -83,4 +85,45 @@ main {
 
 .card:nth-of-type(3) .card__button {
   color: var(--veryDarkCyan);
+}
+
+.card__button:hover,
+.card__button:focus {
+  color: var(--transparentWhite) !important;
+  background: var(--brightOrange);
+  border-color: var(--transparentWhite);
+}
+
+.card:nth-of-type(2) .card__button:focus,
+.card:nth-of-type(2) .card__button:hover {
+  background: var(--darkCyan);
+}
+
+.card:nth-of-type(3) .card__button:focus,
+.card:nth-of-type(3) .card__button:hover {
+  background: var(--veryDarkCyan);
+}
+
+@media only screen and (min-width: 700px) {
+  .row {
+    display: flex;
+  }
+
+  .main {
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .component {
+    width: fit-content;
+  }
+
+  .card:nth-of-type(1) {
+    border-radius: 2.5% 0 0 2.5%;
+  }
+
+  .card:nth-of-type(3) {
+    border-radius: 0 2.5% 2.5% 0;
+  }
 }
